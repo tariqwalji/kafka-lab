@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.giffgaff.kafkalab.generated";
+option java_outer_classname = "TransactionPayload";
+
+enum TransactionType {
+  CARD = 0;
+  BANK_TRANSFER = 1;
+}
+
+enum TransactionDirection {
+  DEBIT = 0;
+  CREDIT = 1;
+}
+
+message Transaction {
+  int32 accountId = 1;
+  int32 amount = 2;
+  TransactionType transactionType = 3;
+  TransactionDirection transactionDirection = 4;
+}
+

@@ -1,0 +1,9 @@
+POST {{host}}/api/v1/transaction
+Content-Type: application/json
+
+{
+  "accountId": 1,
+  "amount": 100,
+  "transactionType": 0,
+  "transactionDirection": 0
+}
